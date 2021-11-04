@@ -1,6 +1,6 @@
 Release type: minor
 
-This release updates how we generated names when creating concrete types 
+This release updates how we generated names when creating concrete types
 from generic types. It also introdiced support for passing lists and optional
 to generic types.
 
