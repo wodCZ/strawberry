@@ -1,8 +1,11 @@
 Release type: minor
 
-This release fixes an issue when creating concrete types from generic when
-passing list objects.
+This release updates how we generated names when creating concrete types 
+from generic types. It also introdiced support for passing lists and optional
+to generic types.
 
-It also changes how type names are generated from generic types, now
-`Value[Optional[List[str]]]` generates `ValueOptionalListStr` instead of
-`StrListOptionalValue` which was unnatural to read.
+So now `Value[Optional[List[str]]]` will generate `ValueOptionalListStr` instead of
+`StrListOptionalValue` which was the previous behaviour.
+
+**Note:** the name generation is a breaking change if you use generic types,
+so you might need to update your clients.
